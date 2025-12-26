@@ -1,0 +1,148 @@
+@import "tailwindcss";
+
+@theme {
+    --font-main: "Fira Code", monospace;
+}
+
+  body {
+        opacity: 0;
+        animation: bodyfade 3s linear forwards;
+      }
+        @keyframes bodyfade {
+        to {
+          opacity: 1;
+        }
+      }
+
+.terminal {
+  font-family: "Fira Code", monospace;
+  font-size: 4rem;
+  position: relative;
+  height: 1.2em;
+  color: black;
+}
+
+/* shared word styles */
+.terminal span {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 0;
+  border-right: 3px solid black;
+  opacity: 0;
+}
+
+/* DESIGN */
+.terminal span:nth-child(1) {
+  animation:
+    type-design 9s steps(6) infinite,
+    cursor-blink 0.8s steps(1) infinite;
+}
+
+/* BUILD */
+.terminal span:nth-child(2) {
+  animation:
+    type-build 9s steps(5) infinite,
+    cursor-blink 0.8s steps(1) infinite;
+}
+
+/* INSPIRE */
+.terminal span:nth-child(3) {
+  animation:
+    type-inspire 9s steps(7) infinite,
+    cursor-blink 0.8s steps(1) infinite;
+}
+
+/* KEYFRAMES (INTENTIONALLY JERKY) */
+@keyframes type-design {
+  0%   { width: 0; opacity: 1; }
+  15%  { width: 6ch; }
+  35%  { width: 6ch; }
+  45%  { width: 0; opacity: 0; }
+  100% { width: 0; opacity: 0; }
+}
+
+@keyframes type-build {
+  0%, 33% { width: 0; opacity: 0; }
+  48%     { width: 5ch; opacity: 1; }
+  65%     { width: 5ch; }
+  75%     { width: 0; opacity: 0; }
+  100%    { width: 0; opacity: 0; }
+}
+
+@keyframes type-inspire {
+  0%, 66% { width: 0; opacity: 0; }
+  80%     { width: 7ch; opacity: 1; }
+  95%     { width: 7ch; }
+  100%    { width: 0; opacity: 0; }
+}
+
+/* CURSOR BLINK */
+@keyframes cursor-blink {
+  0%   { border-color: transparent; }
+  50%  { border-color: black; }
+  100% { border-color: transparent; }
+}
+
+
+/*ABOUT ME */
+.typewriter {  
+            white-space: nowrap;
+            overflow: hidden;
+            width: 0;
+            opacity: 0;
+        }
+
+        .typewriter.active {
+            opacity: 1;
+            animation: typing 10.0s steps(40, end) forwards;     
+             animation-timeline: view();
+            animation-range: entry 0% entry 100%;  
+        }
+
+        .typewriter.finished {
+            border-right: none;
+            animation: none;
+        }
+
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 50%; }
+        }
+/*ABOUT ME - left side */
+        .slide-in {
+          opacity: 0;
+          transform: translateX(-40px);
+
+          animation: slide-in 10s linear forwards;
+          animation-timeline: view();
+          animation-range: entry 60% entry 100%;
+                    }
+
+          @keyframes slide-in {
+          to {
+              opacity: 1;
+              transform: translateX(0);
+               }
+              }
+          /*ABOUT ME - right side*/
+        .slide-in2 {
+          opacity:0;
+          transform: translateX(40px);
+
+          animation: slide-in2 3s linear forwards;
+          animation-timeline: view();
+          animation-range: entry 60% entry 100%;
+        }
+
+        @keyframes slide-in2 {
+          to {
+          opacity: 1;
+          transform: translateX(0);
+          }
+      }
+
+    
