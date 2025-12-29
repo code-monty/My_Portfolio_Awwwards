@@ -98,7 +98,7 @@
 
         .typewriter.active {
             opacity: 1;
-            animation: typing 10.0s steps(40, end) forwards;     
+            animation: typing 5.0s steps(40, end) forwards;     
              animation-timeline: view();
             animation-range: entry 0% entry 100%;  
         }
@@ -144,5 +144,16 @@
           transform: translateX(0);
           }
       }
+
+/* Blinking Cursor for the end text before Footer */
+.blinking-cursor::after {
+  content: '|';
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
 
     

@@ -11,7 +11,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class = "max-w-full min-h-screen w-screen not-only:m-0 p-0 font-main bg-white text-xl">
+    <div class = "max-w-full min-h-screen w-screen m-0 p-0 font-main bg-white text-xl">
       <!--NAVIGATION-->
       <nav class="sticky w-full flex justify-between items-center border-b-4 px-4">
         <!--LOGO-->
@@ -20,15 +20,15 @@
         <button id="menu-toggle" class="md:hidden text-2xl">☰</button>
         <!--LINKS-->
         <ul id="menu" class="hidden md:flex flex-col md:flex-row items-center justify-center list-none gap-6 absolute md:relative top-full left-0 w-full md:w-auto bg-white md:bg-transparent border-b md:border-b-0">
-          <li><a href="#" class="block md:inline p-2">Home</a></li>
+          <li><a href="#home" class="block md:inline p-2">Home</a></li>
           <li><a href="#about" class="block md:inline p-2">About</a></li>
-          <li><a href="#" class="block md:inline p-2">Services</a></li>
-          <li><a href="#" class="block md:inline p-2">Projects</a></li>
+          <li><a href="#projects" class="block md:inline p-2">Projects</a></li>
+          <li><a href="#tools" class="block md:inline p-2">Tools</a></li>
         </ul>
       </nav>
     
       <!--MAIN-->
-      <div class="max-h-full flex flex-col justify-center items-center gap-8 text-center mx-5 mt-25 pb-25">
+      <div id="home" class="max-h-full flex flex-col justify-center items-center gap-8 text-center mx-5 mt-25 pb-25">
       <h1 class="text-6xl tracking-[0px]">I <span class="text-7xl font-bold tracking-[7px]"> AM </span> HERE TO</h1> 
       
       <h1 class="terminal">
@@ -46,9 +46,9 @@
       
      </div>
        <!--ABOUT-->
-       <div id ="about" class = "max-w-full flex flex-col md:flex-row justify-center items-center px-[10em] gap-15 mt-25 pb-25 ">
+       <div id ="about" class = "max-w-full flex flex-col md:flex-row justify-center items-center px-[10em] gap-15 p-10 mt-25 pb-25 ">
         <div class="w-[50vw]">
-        <img src = "My Photo.JPG" class="slide-in w-[20em] rounded-[40%] border-black border-6">
+        <img src = "images/My Photo.JPG" class="slide-in w-[20em] rounded-[40%] border-black border-6">
         </div>
         <div class="w-screen md:w-[50vw] flex flex-col justify-center items-center gap-8 text-center">
           <h1 class=" w-[50vw] md:w-[25vw] text-4xl text-white bg-black p-2 typewriter">ABOUT ME</h1>
@@ -58,7 +58,80 @@
         </div>
         </div>
 
+        <!--PROJECTS-->
+        <div id="projects" class="flex flex-col justify-start items-center pt-25 gap-20 p-20">
+           <h1 class="w-[80vw] text-4xl text-white text-center bg-black p-2 typewriter">PROJECTS</h1>
+          <!--Projects Lists-->
+          <div class="flex flex-col md:flex-row justify-center items-center gap-10 slide-in">
+            <img src="images/Projects1.png" class="w-[20em] p-2 bg-black rounded-2xl ease-in-out duration-300 hover:scale-105">
+            <img src="images/Projects2.png" class="w-[20em] p-2 bg-black rounded-2xl ease-in-out duration-300 hover:scale-105">
+            <img src="images/Projects3.png" class="w-[10em] p-2 bg-black rounded-2xl ease-in-out duration-300 hover:scale-105">
+          </div>
+          <div class="flex flex-col md:flex-row justify-center items-center gap-10 slide-in2">
+            <img src="images/Projects4.png" class="w-[17em] p-2 bg-black rounded-2xl ease-in-out duration-300 hover:scale-105">
+            <img src="images/Projects5.png" class="w-[17em] p-2 bg-black rounded-2xl ease-in-out duration-300 hover:scale-105">
+            <img src="images/Projects6.png" class="w-[20em] p-2 bg-black rounded-2xl ease-in-out duration-300 hover:scale-105">
+          </div>
+           <div class="flex flex-col md:flex-row justify-center items-center gap-10 slide-in">
+            <img src="images/Projects7.png" class="w-[20em] p-2 bg-black rounded-2xl ease-in-out duration-300 hover:scale-105">
+            <img src="images/Projects8.png" class="w-[20em] p-2 bg-black rounded-2xl ease-in-out duration-300 hover:scale-105">
+            <img src="images/Projects9.png" class="w-[20em] p-2 bg-black rounded-2xl ease-in-out duration-300 hover:scale-105">
+          </div>
+            <div class="flex flex-col md:flex-row justify-center items-center gap-10 slide-in2">
+            <img src="images/Projects10.png" class="w-[20em] p-2 bg-black rounded-2xl ease-in-out duration-300 hover:scale-105">
+            <img src="images/Projects11.png" class="w-[20em] p-2 bg-black rounded-2xl ease-in-out duration-300 hover:scale-105">
+            <img src="images/Projects12.png" class="w-[20em] p-2 bg-black rounded-2xl ease-in-out duration-300 hover:scale-105">
+          </div>
+          <div class="flex flex-col md:flex-row justify-center items-center gap-10 slide-in2">
+            <h1 class="text-[3em] text-center">And more...</h1>
+          </div>
+        </div>
+
+        <!--TOOLS-->
+        <div id="tools" class="flex flex-col justify-center items-center pt-35 p-25 gap-20">
+          <h1 class="w-[20em] text-4xl text-white text-center bg-black p- typewriter">TOOLS</h1>
+          <div class="flex flex-col md:flex-row justify-between items-center slide-in gap-4">
+            <div class="flex flex-col items-center justify-center px-10"> 
+            <img src="images/canva.png" class="w-[7em] p-2 border-4 rounded-2xl ease-in-out duration-300 hover:scale-105">
+            <p class="text-2xl">Canva</p>
+            </div>
+            <div class="flex flex-col items-center justify-center px-10"> 
+            <img src="images/figma.png" class="w-[6em] p-2 border-4 rounded-2xl ease-in-out duration-300 hover:scale-105">
+            <p class="text-2xl">Figma</p>
+            </div>
+             <div class="flex flex-col items-center justify-center px-5 text-center"> 
+            <img src="images/adobeps.png" class="w-[7em] p-2 border-4 rounded-2xl ease-in-out duration-300 hover:scale-105">
+            <p class="text-2xl whitespace-nowrap">Adobe Photoshop</p>
+            </div>
+            <div class="flex flex-col items-center justify-center px-5 text-center"> 
+            <img src="images/wix.png" class="w-[7em] p-2 border-4 rounded-2xl ease-in-out duration-300 hover:scale-105">
+            <p class="text-2xl whitespace-nowrap">Wix</p>
+            </div>
+          </div>
+        </div>
+
+        <h1 id="typewriter-end" class="text-[3em] m-auto flex items-center justify-center text-center h-screen">What are you waiting for?.....</h1>
+        
+        <!--FOOTER-->
+        <div class=" bg-black flex flex-col md:flex-row justify-around items-center p-20 text-center gap-6">
+          <h1 class="text-white text-6xl tracking-[10px] font-bold">AM<span class="text-7xl">|</span></h1>
+          <!--navigation foot-->
+          <div class="flex flex-col text-white list-none gap-4">
+          <li><a href="#home" class="block md:inline p-2">Home</a></li>
+          <li><a href="#about" class="block md:inline p-2">About</a></li>
+          <li><a href="#projects" class="block md:inline p-2">Projects</a></li>
+          <li><a href="#tools" class="block md:inline p-2">Tools</a></li>
+          </div>
+           <div class="flex flex-col text-white list-none gap-4">
+          <li><a href="#home" class="block md:inline p-2">Linkedin</a></li>
+          <li><a href="#about" class="block md:inline p-2">Gamil</a></li>
+          </div>
+
+        </div>
+
     </div>
+
+
 
 <script>
         const typewriters = document.querySelectorAll('.typewriter');
@@ -81,6 +154,34 @@
         document.getElementById('menu-toggle').addEventListener('click', function() {
             document.getElementById('menu').classList.toggle('hidden');
         });
+
+        // Custom typewriter for the end h1
+        function typeWriter(element, text, speed) {
+            let i = 0;
+            element.textContent = '';
+            function type() {
+                if (i < text.length) {
+                    element.textContent += text.charAt(i);
+                    i++;
+                    setTimeout(type, speed);
+                } else {
+                    element.classList.add('blinking-cursor');
+                }
+            }
+            type();
+        }
+
+        const endH1 = document.getElementById('typewriter-end');
+        const observerEnd = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    typeWriter(endH1, 'What are you waiting for?..... ', 100);
+                    observerEnd.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        observerEnd.observe(endH1);
       </script>
 
 </body>
