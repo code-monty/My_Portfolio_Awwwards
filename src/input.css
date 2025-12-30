@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@plugin 'tailwind-scrollbar';
 
 @theme {
     --font-main: "Fira Code", monospace;
@@ -110,7 +111,7 @@
 
         @keyframes typing {
             from { width: 0; }
-            to { width: 50%; }
+            to { width: 60%; }
         }
 /*ABOUT ME - left side */
         .slide-in {
@@ -155,5 +156,20 @@
   0%, 50% { opacity: 1; }
   51%, 100% { opacity: 0; }
 }
+
+/* Chrome, Edge, Safari */
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #000;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #222;
+}
+
+
 
     
